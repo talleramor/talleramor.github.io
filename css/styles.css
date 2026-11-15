@@ -1,0 +1,1551 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f3e7d3;
+    color:#3e2c23;
+    font-family:'Jost',sans-serif;
+    min-height:100vh;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.marca{
+    letter-spacing:8px;
+    text-transform:uppercase;
+    font-size:1.7rem;
+    color:#8c6d57;
+    margin-bottom:30px;
+}
+
+h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.5rem;
+    font-weight:400;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+h1 span{
+    display:block;
+}
+
+.descripcion{
+    font-size:1.15rem;
+    letter-spacing:2px;
+    color:#5f4a3d;
+    margin-bottom:50px;
+}
+
+.boton{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background:#8d6b56;
+    padding:16px 40px;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.boton:hover{
+    background:#6d4d3b;
+}
+.logo{
+    width: 380px;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto 40px auto;
+}
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:url("../images/background-watercolor.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+    opacity:0.18;
+
+    z-index:-1;
+}
+.ramita{
+    position:absolute;
+    top:0px;
+    left:-30px;
+    width:360px;
+    opacity:.50;
+    z-index:1;
+    pointer-events:none;
+}
+
+.pincel{
+    position:absolute;
+    bottom:-55px;
+    left:75px;
+    width:340px;
+    transform:rotate(-30eg);
+    opacity:.9;
+    z-index:1;
+    pointer-events:none;
+}
+
+.pluma{
+    position:absolute;
+    bottom:90px;
+    right:-80px;
+    width:340px;
+    transform:rotate(18deg);
+    opacity:.85;
+    z-index:1;
+    pointer-events:none;
+}
+
+.partitura{
+    position:absolute;
+    right:40px;
+    bottom:20px;
+    width:420px;
+    opacity:.25;
+
+    z-index:0;
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+.hero-content{
+    width:90%;
+}
+.hero{
+    padding:110px 40px;
+    min-height:120vh;
+}
+.hero::before{
+    background-size: cover;
+    background-position: center;
+    transform: scale(2.01);
+    transform-origin: center;
+}
+    .pincel{
+        width:240px;
+        left:-90px;
+        bottom:-20px;
+    }
+
+.pluma{
+    width:340px;
+    right:-127px;
+    bottom:-90px;
+}
+
+.partitura{
+    width: 320px;
+    right: -40px;
+    bottom: 95px;
+}
+}
+
+/* Teléfonos */
+@media (max-width: 768px) {
+
+ .ramita{
+    width: 260px;
+    left: -155px;
+    top: -133;
+}   
+.pincel{
+    width:180px;
+    left:-65px;
+    bottom:-100px;
+}
+
+.pluma{
+    width:200px;
+    right:-65px;
+    bottom:130px;
+}
+
+.partitura{
+    width:250px;
+    right:55;
+    bottom:-333px;
+}
+}
+
+/* ========================================
+   EL UNIVERSO DE TALLER AMOR
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.universo {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px 40px;
+    color: #4f453d;
+    background:
+        radial-gradient(
+            circle at 20% 25%,
+            rgba(162, 184, 144, 0.28),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(211, 175, 123, 0.22),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f8f4ec 0%,
+            #f1eadf 50%,
+            #e8e1d5 100%
+        );
+}
+
+.universo::before,
+.universo::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(12px);
+    opacity: 0.45;
+}
+
+.universo::before {
+    width: 320px;
+    height: 320px;
+    top: -130px;
+    right: -100px;
+    background: rgba(125, 153, 105, 0.25);
+}
+
+.universo::after {
+    width: 260px;
+    height: 260px;
+    bottom: -100px;
+    left: -80px;
+    background: rgba(196, 149, 96, 0.23);
+}
+
+.universo-contenido {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 1350px);
+    text-align: center;
+}
+
+.universo h2 {
+    margin-bottom: 45px;
+    color: #59694c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.universo-emblema {
+    margin: 0 auto;
+    max-width: 1350px;
+    color: #554a42;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.7rem, 2.6vw, 2.35rem);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.universo-emblema span {
+    display: block;
+}
+
+/* Teléfonos */
+
+@media (max-width: 768px) {
+
+    .universo {
+        min-height: 100svh;
+        padding: 85px 24px;
+    }
+
+    .universo h2 {
+        margin-bottom: 35px;
+        font-size: 3rem;
+        line-height: 1.05;
+    }
+
+    .universo-emblema {
+        font-size: 1.65rem;
+        line-height: 1.5;
+    }
+
+    .universo-emblema span {
+        margin-bottom: 10px;
+    }
+}
+
+/* ========================================
+   LOS CINCO MUNDOS
+======================================== */
+
+.mundos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+    margin-top: 70px;
+}
+
+.mundo {
+    grid-column: span 2;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid rgba(89, 105, 76, 0.25);
+    border-radius: 50%;
+    color: #4f453d;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 15px 35px rgba(79, 69, 61, 0.10);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.mundo:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.mundo:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.mundo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(79, 69, 61, 0.17);
+}
+
+.mundo-nombre {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.mundo-invitacion {
+    margin-top: 12px;
+    font-family: "Jost", sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.mundo-arte {
+    background: radial-gradient(
+        circle,
+        rgba(132, 157, 225, 0.4),
+        rgba(255, 255, 255, 0.35)
+    );
+}
+
+.mundo-poesia {
+    background: radial-gradient(
+        circle,
+        rgba(190, 150, 174, 0.38),
+        rgba(255, 255, 255, 0.35)
+    );
+}
+
+.mundo-musica {
+    background: radial-gradient(
+        circle,
+        rgba(132, 177, 176, 0.38),
+        rgba(255, 255, 255, 0.35)
+    );
+}
+
+.mundo-publicaciones {
+    background: radial-gradient(
+        circle,
+        rgba(241, 195, 93, 0.4),
+        rgba(255, 255, 255, 0.35)
+    );
+}
+
+.mundo-transformacion {
+    background: radial-gradient(
+        circle,
+        rgba(149, 116, 247, 0.36),
+        rgba(255, 255, 255, 0.35)
+    );
+}
+
+/* Los cinco mundos en teléfonos */
+
+@media (max-width: 768px) {
+
+    .mundos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin-top: 55px;
+    }
+
+    .mundo {
+        width: min(100%, 330px);
+        min-height: 170px;
+    }
+
+    .mundo-nombre {
+        font-size: 2.2rem;
+    }
+}
+
+/* ========================================
+   ARTE · ELLA SOSTIENE LA VIDA
+======================================== */
+
+.arte-destacada {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 40px;
+    color: #4d403b;
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(73, 166, 190, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(224, 174, 85, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f6f2e9 0%,
+            #eef4f1 50%,
+            #f5ede2 100%
+        );
+}
+
+.arte-contenido {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(300px, 0.9fr) minmax(380px, 1.1fr);
+    gap: clamp(50px, 7vw, 100px);
+    align-items: center;
+}
+
+.arte-imagen {
+    width: 100%;
+    max-width: 470px;
+    margin: 0;
+    justify-self: center;
+}
+
+.arte-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 760px;
+    object-fit: contain;
+    box-shadow: 0 25px 60px rgba(31, 66, 79, 0.22);
+}
+
+.arte-historia {
+    max-width: 620px;
+}
+
+.arte-etiqueta {
+    margin-bottom: 18px;
+    color: #287c88;
+    font-family: "Jost", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.arte-historia h2 {
+    margin: 0 0 10px;
+    color: #315f70;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.arte-datos {
+    margin-bottom: 35px;
+    color: #9a6b3f;
+    font-family: "Jost", sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.arte-historia > p:not(.arte-etiqueta):not(.arte-datos):not(.arte-edicion) {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.arte-historia blockquote {
+    margin: 35px 0;
+    padding: 8px 0 8px 25px;
+    border-left: 2px solid rgba(40, 124, 136, 0.55);
+    color: #315f70;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.65rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.arte-edicion {
+    padding-top: 22px;
+    border-top: 1px solid rgba(154, 107, 63, 0.30);
+    color: #79583d;
+    font-family: "Jost", sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+/* Arte en teléfonos */
+
+@media (max-width: 768px) {
+
+    .arte-destacada {
+        padding: 85px 24px;
+    }
+
+    .arte-contenido {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .arte-imagen {
+        width: min(100%, 360px);
+    }
+
+    .arte-imagen img {
+        max-height: none;
+    }
+
+    .arte-historia {
+        max-width: 100%;
+    }
+
+    .arte-historia h2 {
+        font-size: 3.6rem;
+    }
+
+    .arte-historia > p:not(.arte-etiqueta):not(.arte-datos):not(.arte-edicion) {
+        font-size: 0.98rem;
+        line-height: 1.75;
+    }
+
+    .arte-historia blockquote {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================================
+   SERIE · VEJIGANTES
+======================================== */
+
+.serie-vejigantes {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 40px;
+    color: #443b38;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(25, 174, 194, 0.15),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 75%,
+            rgba(218, 63, 76, 0.13),
+            transparent 34%
+        ),
+        linear-gradient(
+            145deg,
+            #faf7ef 0%,
+            #eef6f4 50%,
+            #f7eee9 100%
+        );
+}
+
+.vejigantes-encabezado {
+    width: min(100%, 850px);
+    margin: 0 auto 90px;
+    text-align: center;
+}
+
+.vejigantes-etiqueta {
+    margin-bottom: 18px;
+    color: #237c89;
+    font-family: "Jost", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.vejigantes-encabezado h2 {
+    margin: 0 0 22px;
+       color: #b93242;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(4rem, 8vw, 6.5rem);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.vejigantes-encabezado > p:last-child {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.vejigantes-obras {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+.vejigante-obra {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.95fr) minmax(380px, 1.05fr);
+    gap: clamp(50px, 7vw, 100px);
+    align-items: center;
+    padding: 80px 0;
+}
+
+.vejigante-obra + .vejigante-obra {
+    border-top: 1px solid rgba(86, 92, 78, 0.22);
+}
+
+.vejigante-imagen {
+    width: 100%;
+    max-width: 470px;
+    margin: 0;
+    justify-self: center;
+}
+
+.vejigante-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 720px;
+    object-fit: contain;
+    box-shadow: 0 24px 55px rgba(31, 66, 79, 0.20);
+}
+
+.vejigante-texto {
+    max-width: 590px;
+}
+
+.vejigante-numero {
+    margin-bottom: 18px;
+    color: #237c89;
+    font-family: "Jost", sans-serif;
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.vejigante-texto h3 {
+    margin: 0 0 28px;
+    color: #aa3040;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.7rem, 5vw, 4.4rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.vejigante-texto > p:not(.vejigante-numero):not(.vejigante-estado):not(.vejigante-edicion) {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.vejigante-estado,
+.vejigante-edicion {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(170, 48, 64, 0.25);
+    color: #8c603d;
+    font-family: "Jost", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1.6px;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.vejigante-estado {
+    color: #8e3944;
+}
+
+.boton-etsy {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 26px;
+    border: 1px solid #aa3040;
+    border-radius: 999px;
+    color: #aa3040;
+    font-family: "Jost", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton-etsy:hover,
+.boton-etsy:focus-visible {
+    color: #ffffff;
+    background-color: #aa3040;
+    transform: translateY(-2px);
+}
+
+/* Vejigantes en teléfonos */
+
+@media (max-width: 768px) {
+
+    .serie-vejigantes {
+        padding: 85px 24px;
+    }
+
+    .vejigantes-encabezado {
+        margin-bottom: 45px;
+    }
+
+    .vejigantes-encabezado h2 {
+        font-size: 4rem;
+    }
+
+    .vejigantes-encabezado > p:last-child {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .vejigante-obra {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 60px 0;
+    }
+
+    .vejigante-imagen {
+        width: min(100%, 360px);
+    }
+
+    .vejigante-imagen img {
+        max-height: none;
+    }
+
+    .vejigante-texto {
+        max-width: 100%;
+    }
+
+    .vejigante-texto h3 {
+        font-size: 3rem;
+    }
+
+    /* En el segundo afiche, coloca la imagen antes del relato */
+
+    .vejigante-segundo .vejigante-imagen {
+        grid-row: 1;
+    }
+
+    .vejigante-segundo .vejigante-texto {
+        grid-row: 2;
+    }
+}
+
+/* ========================================
+   EN PELIGRO DE EXTINCIÓN
+======================================== */
+
+.extincion {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 40px;
+    color: #f4eee5;
+    background:
+        radial-gradient(
+            circle at 10% 12%,
+            rgba(199, 75, 35, 0.22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 78%,
+            rgba(220, 138, 44, 0.15),
+            transparent 32%
+        ),
+        linear-gradient(
+            145deg,
+            #191614 0%,
+            #26201c 48%,
+            #151312 100%
+        );
+}
+
+/* Resplandor suave que recuerda una chispa */
+
+.extincion::before {
+    content: "";
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    width: 620px;
+    height: 620px;
+    border-radius: 50%;
+    background: rgba(211, 93, 37, 0.08);
+    filter: blur(90px);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.extincion-encabezado {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 900px);
+    margin: 0 auto 90px;
+    text-align: center;
+}
+
+.extincion-etiqueta {
+    margin-bottom: 22px;
+    color: #e59a57;
+    font-family: "Jost", sans-serif;
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.extincion-encabezado h2 {
+    max-width: 850px;
+    margin: 0 auto 22px;
+    color: #f7eee3;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.6rem, 7vw, 6.6rem);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.extincion-lema {
+    margin: 0 0 55px;
+    color: #e78344;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.55rem, 3vw, 2.15rem);
+    font-style: italic;
+    line-height: 1.3;
+}
+
+.extincion-manifiesto {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 42px 48px;
+    border-top: 1px solid rgba(229, 154, 87, 0.42);
+    border-bottom: 1px solid rgba(229, 154, 87, 0.42);
+}
+
+.extincion-manifiesto::before {
+    content: "✦";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    padding: 0 18px;
+    color: #e78344;
+    background: #211c19;
+    font-size: 1.2rem;
+    transform: translateX(-50%);
+}
+
+.extincion-manifiesto p {
+    margin: 0;
+    color: rgba(247, 238, 227, 0.84);
+    font-size: 1.08rem;
+    line-height: 1.9;
+}
+
+.extincion-manifiesto p + p {
+    margin-top: 22px;
+}
+
+.extincion-manifiesto strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.extincion-declaracion {
+    max-width: 650px;
+    margin: 42px auto 0;
+    color: #f2c08a;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Galería de las especies */
+
+.extincion-galeria {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 65px 48px;
+    width: min(100%, 1180px);
+    margin: 0 auto;
+}
+
+.extincion .especie {
+    position: relative;
+    min-width: 0;
+}
+
+.extincion .especie-imagen {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 18px;
+    border: 1px solid rgba(229, 154, 87, 0.2);
+    background: rgba(255, 255, 255, 0.045);
+    box-shadow: 0 28px 65px rgba(0, 0, 0, 0.28);
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.extincion .especie:hover .especie-imagen {
+    border-color: rgba(229, 154, 87, 0.55);
+    box-shadow: 0 32px 75px rgba(0, 0, 0, 0.38);
+    transform: translateY(-6px);
+}
+
+.extincion .especie-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
+}
+
+/* Número tenue detrás de cada obra */
+
+.extincion .especie::before {
+    position: absolute;
+    top: -34px;
+    right: 14px;
+    z-index: -1;
+    color: rgba(229, 154, 87, 0.10);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.extincion .especie:nth-child(1)::before {
+    content: "01";
+}
+
+.extincion .especie:nth-child(2)::before {
+    content: "02";
+}
+
+.extincion .especie:nth-child(3)::before {
+    content: "03";
+}
+
+.extincion .especie:nth-child(4)::before {
+    content: "04";
+}
+
+.extincion .especie:nth-child(5)::before {
+    content: "05";
+}
+
+.extincion .especie:nth-child(6)::before {
+    content: "06";
+}
+
+.extincion .especie-texto {
+    padding: 26px 10px 0;
+}
+
+.extincion .especie-texto h3 {
+    margin: 0 0 8px;
+    color: #f5ede3;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.extincion .especie-texto > p:last-child {
+    margin: 0;
+    color: rgba(247, 238, 227, 0.58);
+    font-family: "Jost", sans-serif;
+    font-size: 0.76rem;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.extincion .especie-distincion {
+    display: inline-block;
+    margin: 0 0 14px;
+    padding: 7px 13px;
+    border: 1px solid rgba(229, 154, 87, 0.48);
+    border-radius: 999px;
+    color: #efae71;
+    font-family: "Jost", sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* Cierre de la colección */
+
+.extincion-cierre {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 760px);
+    margin: 100px auto 0;
+    padding: 45px 50px;
+    border: 1px solid rgba(229, 154, 87, 0.25);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.extincion-cierre p {
+    margin: 0;
+    color: rgba(247, 238, 227, 0.78);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.extincion-cierre p + p {
+    margin-top: 18px;
+}
+
+.extincion-cierre .extincion-proximamente {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(229, 154, 87, 0.25);
+    color: #efae71;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.55rem;
+    font-style: italic;
+}
+
+/* En Peligro de Extinción en teléfonos */
+
+@media (max-width: 768px) {
+
+    .extincion {
+        padding: 85px 22px;
+    }
+
+    .extincion-encabezado {
+        margin-bottom: 65px;
+    }
+
+    .extincion-encabezado h2 {
+        font-size: clamp(3.2rem, 15vw, 4.5rem);
+    }
+
+    .extincion-lema {
+        margin-bottom: 42px;
+        font-size: 1.55rem;
+    }
+
+    .extincion-manifiesto {
+        padding: 35px 12px;
+    }
+
+    .extincion-manifiesto p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .extincion-declaracion {
+        margin-top: 34px;
+        font-size: 1.45rem;
+    }
+
+    .extincion-galeria {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .extincion .especie-imagen {
+        padding: 12px;
+    }
+
+    .extincion .especie-texto {
+        padding: 22px 4px 0;
+    }
+
+    .extincion .especie-texto h3 {
+        font-size: 2.45rem;
+    }
+
+    .extincion-cierre {
+        margin-top: 80px;
+        padding: 38px 24px;
+    }
+}
+
+/* ========================================
+   BOTÓN · VOLVER AL INICIO
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.volver-arriba {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+
+    color: #ffffff;
+    background: rgba(91, 58, 45, 0.88);
+    box-shadow: 0 10px 30px rgba(35, 22, 17, 0.24);
+
+    font-family: "Jost", sans-serif;
+    font-size: 1.45rem;
+    line-height: 1;
+    text-decoration: none;
+
+    backdrop-filter: blur(8px);
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.volver-arriba:hover,
+.volver-arriba:focus-visible {
+    color: #ffffff;
+    background: #b04b32;
+    box-shadow: 0 14px 34px rgba(35, 22, 17, 0.32);
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+
+    .volver-arriba {
+        right: 18px;
+        bottom: 18px;
+        width: 46px;
+        height: 46px;
+        font-size: 1.25rem;
+    }
+}
+
+/* ========================================
+   PUBLICACIONES
+======================================== */
+
+.publicaciones {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 40px;
+    color: #493b34;
+    background:
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(189, 137, 73, 0.15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 92% 85%,
+            rgba(126, 70, 91, 0.12),
+            transparent 32%
+        ),
+        linear-gradient(
+            145deg,
+            #f8f1e6 0%,
+            #fffdf8 50%,
+            #f1e5d8 100%
+        );
+}
+
+.publicaciones-encabezado {
+    width: min(100%, 820px);
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.publicaciones-etiqueta {
+    margin-bottom: 18px;
+    color: #9b693c;
+    font-family: "Jost", sans-serif;
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+}
+
+.publicaciones-encabezado h2 {
+    margin: 0 0 24px;
+    color: #713e38;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(4rem, 8vw, 6.5rem);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.publicaciones-introduccion {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.08rem;
+    line-height: 1.85;
+}
+
+.publicaciones-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 38px;
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+.libro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 30px 32px;
+    border: 1px solid rgba(126, 86, 55, 0.18);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.68);
+    box-shadow: 0 18px 45px rgba(77, 55, 43, 0.10);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.libro:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 26px 55px rgba(77, 55, 43, 0.17);
+}
+
+.libro img {
+    display: block;
+    width: min(100%, 230px);
+    aspect-ratio: 2 / 3;
+    margin: 0 auto 30px;
+    object-fit: cover;
+    box-shadow: 0 16px 32px rgba(48, 37, 31, 0.22);
+}
+
+.libro-contenido {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.libro-genero {
+    margin: 0 0 13px;
+    color: #a36d38;
+    font-family: "Jost", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.libro-contenido h3 {
+    margin: 0 0 18px;
+    color: #713e38;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.15rem;
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.libro-contenido > p:not(.libro-genero) {
+    margin: 0 0 25px;
+    color: #62544d;
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+.libro-contenido a,
+.publicaciones-cierre a {
+    display: inline-block;
+    padding: 13px 23px;
+    border: 1px solid #9b693c;
+    border-radius: 999px;
+    color: #87582f;
+    font-family: "Jost", sans-serif;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.libro-contenido a {
+    align-self: center;
+    margin-top: auto;
+}
+
+.libro-contenido a:hover,
+.libro-contenido a:focus-visible,
+.publicaciones-cierre a:hover,
+.publicaciones-cierre a:focus-visible {
+    color: #ffffff;
+    background-color: #9b693c;
+    transform: translateY(-2px);
+}
+
+.publicaciones-cierre {
+    width: min(100%, 700px);
+    margin: 75px auto 0;
+    padding-top: 45px;
+    border-top: 1px solid rgba(126, 86, 55, 0.25);
+    text-align: center;
+}
+
+.publicaciones-cierre p {
+    margin: 0 auto 25px;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/* Publicaciones en tabletas */
+
+@media (max-width: 1000px) {
+
+    .publicaciones-galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Publicaciones en teléfonos */
+
+@media (max-width: 650px) {
+
+    .publicaciones {
+        padding: 85px 22px;
+    }
+
+    .publicaciones-encabezado {
+        margin-bottom: 50px;
+    }
+
+    .publicaciones-encabezado h2 {
+        font-size: 3.8rem;
+    }
+
+    .publicaciones-introduccion {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .publicaciones-galeria {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .libro {
+        padding: 30px 24px;
+    }
+
+    .libro img {
+        width: min(100%, 245px);
+    }
+
+    .libro-contenido h3 {
+        font-size: 2.25rem;
+    }
+
+    .publicaciones-cierre {
+        margin-top: 55px;
+    }
+}
+
+/* ========================================
+   UNIVERSO · DISTRIBUCIÓN 3 - 2 - 1
+======================================== */
+
+.mundos {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 24px 18px;
+    align-items: center;
+    width: min(100%, 960px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mundo {
+    width: min(100%, 290px);
+    margin: 0;
+    justify-self: center;
+}
+
+/* Primera fila */
+
+.mundo-arte {
+    grid-column: 1 / 3;
+}
+
+.mundo-poesia {
+    grid-column: 3 / 5;
+}
+
+.mundo-musica {
+    grid-column: 5 / 7;
+}
+
+/* Segunda fila */
+
+.mundo-publicaciones {
+    grid-column: 2 / 4;
+}
+
+.mundo-transformacion {
+    grid-column: 4 / 6;
+}
+
+/* Tercera fila */
+
+.mundo-sobre-mi {
+    grid-column: 3 / 5;
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255, 255, 255, 0.55),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(226, 154, 132, 0.34),
+            rgba(190, 119, 126, 0.25)
+        );
+    box-shadow: 0 15px 35px rgba(120, 70, 72, 0.14);
+}
+
+/* Universo en teléfonos */
+
+@media (max-width: 700px) {
+
+    .mundos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .mundo-arte,
+    .mundo-poesia,
+    .mundo-musica,
+    .mundo-publicaciones,
+    .mundo-transformacion,
+    .mundo-sobre-mi {
+        grid-column: 1;
+    }
+
+    .mundo {
+        width: min(100%, 330px);
+    }
+}
+
+/* Hacer más compactas las ruedas del Universo */
+
+.universo-contenido {
+    padding-top: 55px;
+    padding-bottom: 45px;
+}
+
+.universo-emblema {
+    margin-bottom: 32px;
+}
+
+.mundos {
+    gap: 16px 14px;
+}
+
+.mundo {
+    width: min(100%, 265px);
+    min-height: 115px;
+    padding: 22px 26px;
+}
+
+.mundo-nombre {
+    font-size: 1.5rem;
+}
+
+.mundo-invitacion {
+    font-size: 0.68rem;
+}

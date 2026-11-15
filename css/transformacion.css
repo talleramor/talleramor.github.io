@@ -1,0 +1,1225 @@
+
+/* ========================================
+   PÁGINA TRANSFORMACIÓN
+======================================== */
+
+.pagina-transformacion {
+    margin: 0;
+    color: #33283d;
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(214, 190, 235, 0.38),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 88% 22%,
+            rgba(176, 218, 218, 0.28),
+            transparent 34%
+        ),
+        #fbf8f3;
+}
+
+
+/* Navegación */
+
+.transformacion-navegacion {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    padding: 18px 6%;
+    background: rgba(251, 248, 243, 0.88);
+    border-bottom: 1px solid rgba(94, 66, 111, 0.12);
+    backdrop-filter: blur(12px);
+}
+
+.transformacion-regreso {
+    color: #6b5278;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+        color 0.3s ease,
+        letter-spacing 0.3s ease;
+}
+
+.transformacion-regreso:hover {
+    color: #9a648f;
+    letter-spacing: 0.17em;
+}
+
+
+/* Contenedor general */
+
+.transformacion-contenedor {
+    width: min(88%, 920px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* Portada */
+
+.transformacion-portada {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 24px;
+    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(114, 81, 145, 0.10),
+            rgba(201, 159, 194, 0.16),
+            rgba(126, 195, 190, 0.12)
+        );
+}
+
+.transformacion-portada-contenido {
+    width: min(100%, 830px);
+}
+
+.transformacion-etiqueta {
+    margin-bottom: 24px;
+    color: #8b668c;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+}
+
+.transformacion-portada h1 {
+    margin: 0 0 30px;
+    color: #4d3a5b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.8rem, 9vw, 7.2rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+}
+
+.transformacion-lema {
+    max-width: 690px;
+    margin: 0 auto;
+    color: #63546c;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.1rem, 2.2vw, 1.48rem);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.transformacion-simbolo {
+    margin-top: 38px;
+    color: #a47a9d;
+    font-size: 1.4rem;
+}
+
+
+/* Introducción */
+
+.transformacion-presentacion {
+    padding: 95px 20px;
+    background: rgba(255, 255, 255, 0.54);
+}
+
+.transformacion-introduccion {
+    max-width: 790px;
+    margin: 0 auto;
+    color: #514559;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.18rem, 2.1vw, 1.52rem);
+    line-height: 1.95;
+    text-align: center;
+}
+
+
+/* Secciones */
+
+.transformacion-seccion {
+    position: relative;
+    overflow: hidden;
+    padding: 110px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(92, 67, 109, 0.09);
+}
+
+.transformacion-seccion:nth-of-type(even) {
+    background: rgba(255, 255, 255, 0.42);
+}
+
+.transformacion-numero {
+    margin: 0 0 18px;
+    color: rgba(91, 63, 111, 0.28);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+.transformacion-subtitulo {
+    margin-bottom: 16px;
+    color: #9a728f;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+
+.transformacion-seccion h2 {
+    margin: 0 auto 26px;
+    color: #4c3b57;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.14;
+}
+
+.transformacion-seccion h2 span {
+    display: block;
+    margin-top: 9px;
+    color: #8e718d;
+    font-size: 0.48em;
+    font-style: italic;
+}
+
+.transformacion-descripcion {
+    max-width: 690px;
+    margin: 0 auto 38px;
+    color: #675c6d;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.transformacion-aviso {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 22px 28px;
+    color: #725d78;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.94rem;
+    font-style: italic;
+    line-height: 1.65;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(113, 81, 126, 0.14);
+    border-radius: 100px;
+}
+
+
+/* Personalidad de cada espacio */
+
+.pildoritas {
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(231, 196, 123, 0.18),
+            transparent 33%
+        );
+}
+
+.aprende-conmigo {
+    background:
+        radial-gradient(
+            circle at 85% 45%,
+            rgba(155, 119, 183, 0.17),
+            transparent 34%
+        );
+}
+
+.medita-conmigo {
+    background:
+        radial-gradient(
+            circle at 15% 45%,
+            rgba(103, 186, 183, 0.15),
+            transparent 34%
+        );
+}
+
+.cursos-transformacion {
+    background:
+        radial-gradient(
+            circle at 86% 50%,
+            rgba(187, 128, 164, 0.15),
+            transparent 35%
+        );
+}
+
+.voces-del-camino {
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(203, 176, 222, 0.18),
+            transparent 42%
+        );
+}
+
+
+/* Cierre */
+
+.transformacion-cierre {
+    padding: 105px 20px;
+    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            #51405e,
+            #6f5278,
+            #496e73
+        );
+}
+
+.transformacion-cierre p {
+    max-width: 720px;
+    margin: 0 auto 38px;
+    color: #fffaf4;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.transformacion-boton {
+    display: inline-block;
+    padding: 15px 28px;
+    color: #fffaf4;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 100px;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.transformacion-boton:hover {
+    color: #594565;
+    background: #fffaf4;
+    transform: translateY(-3px);
+}
+
+
+/* Teléfonos */
+
+@media (max-width: 700px) {
+
+    .transformacion-navegacion {
+        padding: 15px 20px;
+    }
+
+    .transformacion-regreso {
+        font-size: 0.62rem;
+        letter-spacing: 0.1em;
+    }
+
+    .transformacion-portada {
+        min-height: 72vh;
+        padding: 70px 22px;
+    }
+
+    .transformacion-presentacion,
+    .transformacion-seccion,
+    .transformacion-cierre {
+        padding: 75px 20px;
+    }
+
+    .transformacion-introduccion {
+        text-align: left;
+    }
+
+    .transformacion-aviso {
+        padding: 20px 22px;
+        border-radius: 24px;
+    }
+}
+
+/* =========================================
+   FOTO DE PORTADA — TRANSFORMACIÓN
+========================================= */
+
+.transformacion-portada-interior {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    align-items: center;
+    gap: clamp(35px, 6vw, 80px);
+}
+
+.transformacion-portada-contenido {
+    max-width: 520px;
+    text-align: left;
+}
+
+.transformacion-portada-imagen {
+    margin: 0;
+    position: relative;
+}
+
+.transformacion-portada-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 620px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 48% 52% 46% 54% / 42% 44% 56% 58%;
+    box-shadow: 0 24px 60px rgba(78, 54, 112, 0.20);
+}
+
+/* Adaptación para teléfonos y pantallas pequeñas */
+
+@media (max-width: 780px) {
+    .transformacion-portada-interior {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .transformacion-portada-contenido {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .transformacion-portada-imagen {
+        width: min(100%, 520px);
+        margin: 0 auto;
+    }
+}
+
+/* Ajuste final de la portada */
+
+.transformacion-portada-interior {
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    gap: clamp(40px, 6vw, 80px);
+}
+
+.transformacion-portada-contenido {
+    max-width: none;
+}
+
+.transformacion-portada-contenido h1 {
+    font-size: clamp(3.2rem, 6vw, 5.2rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.transformacion-portada-imagen {
+    width: min(100%, 390px);
+    justify-self: end;
+}
+
+/* ========================================
+   LECTURA DE LA PILDORITA COMPLETA
+======================================== */
+
+.pildorita-tarjeta {
+    width: min(90%, 850px);
+    margin: 60px auto 0;
+    padding: clamp(30px, 6vw, 65px);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(94, 66, 111, 0.15);
+    border-radius: 28px;
+    box-shadow: 0 24px 70px rgba(64, 45, 78, 0.09);
+    text-align: left !important;
+}
+
+/* Solamente el encabezado queda centrado */
+
+.pildorita-encabezado {
+    margin-bottom: 38px;
+    text-align: center !important;
+}
+
+.pildorita-encabezado h3,
+.pildorita-categoria,
+.pildorita-fecha {
+    text-align: center !important;
+}
+
+/* Texto de la disertación */
+
+.pildorita-tarjeta > p {
+    max-width: none;
+    margin: 0 0 1.4em;
+    color: #433b47;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.06rem;
+    line-height: 1.9;
+    text-align: left !important;
+}
+
+/* Definición inicial */
+
+.pildorita-definicion {
+    padding: 20px 24px;
+    background: rgba(231, 218, 240, 0.42);
+    border-left: 4px solid #8c709d;
+    border-radius: 0 14px 14px 0;
+}
+
+/* Las tres preguntas */
+
+.pildorita-preguntas {
+    margin: 30px 0;
+    padding: 28px 32px;
+    background: rgba(238, 229, 244, 0.58);
+    border-radius: 20px;
+    text-align: left !important;
+}
+
+.pildorita-preguntas p {
+    margin: 0 0 20px;
+    font-size: 1.04rem;
+    line-height: 1.75;
+    text-align: left !important;
+}
+
+.pildorita-preguntas p:last-child {
+    margin-bottom: 0;
+}
+
+.pildorita-aclaracion {
+    color: #685c6d;
+    font-size: 0.94rem !important;
+    font-style: italic;
+}
+
+/* Ejemplos de reciprocidad */
+
+.pildorita-semillas {
+    margin: 32px 0;
+    padding: 28px 32px;
+    background: rgba(247, 241, 231, 0.7);
+    border-radius: 20px;
+    text-align: left !important;
+}
+
+.pildorita-semillas p {
+    margin: 0;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(94, 66, 111, 0.12);
+    font-size: 1.03rem;
+    line-height: 1.65;
+    text-align: left !important;
+}
+
+.pildorita-semillas p:last-child {
+    border-bottom: 0;
+}
+
+/* Cierre y firma */
+
+.pildorita-destacada {
+    margin-top: 30px !important;
+    color: #624a70 !important;
+    font-size: 1.25rem !important;
+    font-style: italic;
+    text-align: center !important;
+}
+
+.pildorita-cierre {
+    margin-top: 32px !important;
+    color: #523d60 !important;
+    font-size: 1.22rem !important;
+    font-weight: 700;
+    text-align: center !important;
+}
+
+.pildorita-firma {
+    margin-top: 42px;
+    color: #625768;
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: right;
+}
+
+.pildorita-firma p {
+    margin: 4px 0;
+}
+
+/* Teléfonos */
+
+@media (max-width: 700px) {
+    .pildorita-tarjeta {
+        width: calc(100% - 28px);
+        padding: 28px 22px;
+        border-radius: 20px;
+    }
+
+    .pildorita-preguntas,
+    .pildorita-semillas {
+        padding: 22px 20px;
+    }
+}
+
+/* ========================================
+   INSIGHT TIMER — MEDITA CONMIGO
+======================================== */
+
+.insight-timer-contenedor {
+    width: min(100%, 900px);
+    margin: 45px auto 0;
+    padding: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(94, 66, 111, 0.15);
+    border-radius: 26px;
+    box-shadow: 0 22px 65px rgba(64, 45, 78, 0.11);
+}
+
+.insight-timer-contenedor iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 16px;
+}
+
+@media (max-width: 700px) {
+    .insight-timer-contenedor {
+        margin-top: 32px;
+        padding: 7px;
+        border-radius: 20px;
+    }
+
+    .insight-timer-contenedor iframe {
+        height: 500px;
+        border-radius: 14px;
+    }
+}
+
+/* ========================================
+   YOUTUBE — APRENDE CONMIGO
+======================================== */
+
+.youtube-contenedor {
+    width: min(100%, 900px);
+    margin: 45px auto 0;
+    padding: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(94, 66, 111, 0.15);
+    border-radius: 26px;
+    box-shadow: 0 22px 65px rgba(64, 45, 78, 0.11);
+}
+
+.youtube-contenedor iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+    border-radius: 16px;
+}
+
+@media (max-width: 700px) {
+    .youtube-contenedor {
+        margin-top: 32px;
+        padding: 7px;
+        border-radius: 20px;
+    }
+
+    .youtube-contenedor iframe {
+        border-radius: 14px;
+    }
+}
+
+/* ========================================
+   PLUMA DECORATIVA — PILDORITAS
+======================================== */
+
+.pildoritas {
+    position: relative;
+}
+
+.pildoritas::before {
+    content: "🪶";
+    position: absolute;
+    top: 285px;
+    left: clamp(70px, 13vw, 210px);
+    z-index: 1;
+
+    font-size: clamp(4.5rem, 8vw, 7.5rem);
+    line-height: 1;
+
+    opacity: 0.28;
+    filter: grayscale(1) sepia(0.25);
+   transform: rotate(0deg) scaleX(-1);
+    transform-origin: center;
+
+    pointer-events: none;
+}
+
+/* En teléfonos la hacemos más discreta */
+
+@media (max-width: 700px) {
+    .pildoritas::before {
+        top: 35px;
+        left: 14px;
+        font-size: 4rem;
+        opacity: 0.14;
+    }
+}
+
+/* ========================================
+   CHO KU REI — MEDITA CONMIGO
+======================================== */
+
+.medita-conmigo {
+    position: relative;
+    overflow: hidden;
+}
+
+.medita-conmigo .transformacion-contenedor {
+    position: relative;
+    z-index: 2;
+}
+
+.medita-conmigo::after {
+    content: "";
+    position: absolute;
+    right: clamp(120px, 22vw, 300px);
+bottom: 155px;
+    z-index: 1;
+
+    width: clamp(130px, 17vw, 210px);
+    height: clamp(155px, 21vw, 250px);
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 260'%3E%3Cpath d='M28 36 H150 V215 C150 240 110 245 84 219 C52 187 64 132 106 114 C147 96 190 123 190 162 C190 198 151 220 121 200 C94 182 97 143 124 128 C149 114 176 130 176 154 C176 176 153 188 136 176 C122 166 123 146 136 138' fill='none' stroke='%236e5878' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0.11;
+    transform: rotate(-7deg);
+
+    pointer-events: none;
+}
+
+@media (max-width: 700px) {
+    .medita-conmigo::after {
+        right: 12px;
+        bottom: 35px;
+        width: 105px;
+        height: 130px;
+        opacity: 0.07;
+    }
+}
+
+/* ========================================
+   SEI HE KI — MEDITA CONMIGO
+======================================== */
+
+.medita-conmigo::before {
+    content: "";
+    position: absolute;
+    left: clamp(120px, 22vw, 300px);
+bottom: 155px;
+    z-index: 1;
+
+    width: clamp(130px, 17vw, 210px);
+    height: clamp(155px, 21vw, 250px);
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 260'%3E%3Cg fill='none' stroke='%236e5878' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M78 48 C63 70 49 82 25 89 C44 98 63 91 77 80'/%3E%3Cpath d='M68 99 C52 110 37 116 23 114 L24 136 C39 145 56 139 70 128 L57 165 C47 191 28 205 7 205'/%3E%3Cpath d='M104 29 C143 37 159 80 148 123 C138 163 115 204 88 231'/%3E%3Cpath d='M157 28 C179 17 191 24 188 43 C186 56 178 64 171 70'/%3E%3Cpath d='M166 80 C189 69 204 81 201 101 C199 114 188 125 177 132'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0.11;
+    transform: rotate(5deg);
+
+    pointer-events: none;
+}
+
+@media (max-width: 700px) {
+    .medita-conmigo::before {
+        left: 12px;
+        bottom: 35px;
+        width: 105px;
+        height: 130px;
+        opacity: 0.07;
+    }
+}
+
+/* ========================================
+   BOTÓN DE CURSOS — HOTMART
+======================================== */
+
+.cursos-transformacion .transformacion-boton {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 16px 32px;
+
+    color: #ffffff;
+    background: #6e5878;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border: 1px solid #6e5878;
+    border-radius: 100px;
+
+    box-shadow: 0 10px 25px rgba(110, 88, 120, 0.22);
+    transition: all 0.3s ease;
+}
+
+.cursos-transformacion .transformacion-boton:hover {
+    color: #6e5878;
+    background: rgba(255, 255, 255, 0.75);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(110, 88, 120, 0.28);
+}
+
+/* ========================================
+   TARJETAS DE CURSOS — HOTMART
+======================================== */
+
+.cursos-transformacion {
+    position: relative;
+    overflow: hidden;
+}
+
+.cursos-grid {
+    width: min(100%, 980px);
+    margin: 60px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px;
+}
+
+.curso-tarjeta {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px 18px 38px;
+
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid rgba(110, 88, 120, 0.18);
+    border-radius: 32px;
+
+    box-shadow:
+        0 20px 50px rgba(75, 58, 88, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.curso-tarjeta:hover {
+    transform: translateY(-9px);
+    border-color: rgba(110, 88, 120, 0.38);
+
+    box-shadow:
+        0 28px 60px rgba(75, 58, 88, 0.2),
+        0 0 35px rgba(113, 86, 150, 0.08);
+}
+
+.curso-imagen-contenedor {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 22px;
+    background: rgba(110, 88, 120, 0.08);
+}
+
+.curso-imagen {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.curso-tarjeta:hover .curso-imagen {
+    transform: scale(1.035);
+}
+
+.curso-contenido {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 30px 22px 0;
+    text-align: center;
+}
+
+.curso-etiqueta {
+    margin: 0 0 14px;
+
+    color: #8c7296;
+
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+}
+
+.curso-tarjeta h3 {
+    margin: 0;
+
+    color: #34283c;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.curso-subtitulo {
+    margin: 10px 0 20px;
+
+    color: #6e5878;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    font-style: italic;
+}
+
+.curso-descripcion {
+    max-width: 390px;
+    margin: 0 0 28px;
+
+    color: #625b65;
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.curso-contenido .transformacion-boton {
+    margin-top: auto;
+}
+
+/* Resplandor suave detrás de las tarjetas */
+
+.cursos-transformacion::before,
+.cursos-transformacion::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+.cursos-transformacion::before {
+    top: 22%;
+    left: -190px;
+    background: rgba(112, 81, 143, 0.08);
+}
+
+.cursos-transformacion::after {
+    right: -190px;
+    bottom: 12%;
+    background: rgba(65, 151, 166, 0.07);
+}
+
+.cursos-transformacion .transformacion-contenedor {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   CURSOS — TELÉFONOS
+======================================== */
+
+@media (max-width: 760px) {
+
+    .cursos-grid {
+        width: min(100%, 460px);
+        margin-top: 42px;
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .curso-tarjeta {
+        padding: 14px 14px 32px;
+        border-radius: 25px;
+    }
+
+    .curso-imagen-contenedor {
+        border-radius: 18px;
+    }
+
+    .curso-contenido {
+        padding: 25px 16px 0;
+    }
+
+    .curso-tarjeta h3 {
+        font-size: 2rem;
+    }
+
+}
+
+/* ========================================
+   AJUSTE COMPACTO — CURSOS
+======================================== */
+
+.cursos-transformacion {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.cursos-transformacion .transformacion-descripcion {
+    margin-bottom: 0;
+}
+
+.cursos-grid {
+    width: min(100%, 760px);
+    margin-top: 35px;
+    gap: 28px;
+}
+
+.curso-tarjeta {
+    padding: 13px 13px 26px;
+    border-radius: 25px;
+}
+
+.curso-imagen-contenedor {
+    width: 100%;
+    height: 255px;
+    aspect-ratio: auto;
+    border-radius: 18px;
+}
+
+.curso-imagen {
+    object-fit: cover;
+}
+
+.curso-contenido {
+    padding: 20px 15px 0;
+}
+
+.curso-etiqueta {
+    margin-bottom: 8px;
+    font-size: 0.6rem;
+}
+
+.curso-tarjeta h3 {
+    font-size: 1.8rem;
+}
+
+.curso-subtitulo {
+    margin: 6px 0 12px;
+    font-size: 0.92rem;
+}
+
+.curso-descripcion {
+    margin-bottom: 18px;
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+.curso-contenido .transformacion-boton {
+    padding: 12px 24px;
+    font-size: 0.65rem;
+}
+
+@media (max-width: 760px) {
+
+    .curso-imagen-contenedor {
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+}
+
+/* ========================================
+   CURSOS HORIZONTALES — AJUSTE FINAL
+======================================== */
+
+.cursos-transformacion {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.cursos-grid {
+    width: min(100%, 1050px);
+    margin-top: 32px;
+    gap: 24px;
+}
+
+.curso-tarjeta {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    align-items: center;
+
+    min-height: 290px;
+    padding: 14px;
+
+    border-radius: 26px;
+}
+
+.curso-imagen-contenedor {
+    width: 210px;
+    height: 210px;
+    aspect-ratio: 1 / 1;
+    border-radius: 19px;
+}
+
+.curso-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.curso-contenido {
+    align-items: flex-start;
+    padding: 15px 17px 15px 22px;
+    text-align: left;
+}
+
+.curso-etiqueta {
+    margin-bottom: 7px;
+}
+
+.curso-tarjeta h3 {
+    font-size: 1.75rem;
+}
+
+.curso-subtitulo {
+    margin: 5px 0 11px;
+}
+
+.curso-descripcion {
+    margin-bottom: 16px;
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.curso-contenido .transformacion-boton {
+    margin-top: auto;
+    padding: 11px 19px;
+}
+
+/* En pantallas más estrechas vuelven a colocarse verticales */
+
+@media (max-width: 900px) {
+
+    .cursos-grid {
+        width: min(100%, 700px);
+        grid-template-columns: 1fr;
+    }
+
+    .curso-tarjeta {
+        grid-template-columns: 190px 1fr;
+    }
+
+    .curso-imagen-contenedor {
+        width: 190px;
+        height: 190px;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .curso-tarjeta {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .curso-imagen-contenedor {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .curso-contenido {
+        align-items: center;
+        padding: 22px 15px 10px;
+        text-align: center;
+    }
+
+}
+
+/* ========================================
+   CURSOS — UNA TARJETA DEBAJO DE LA OTRA
+======================================== */
+
+.cursos-grid {
+    width: min(100%, 820px);
+    grid-template-columns: 1fr;
+    gap: 26px;
+}
+
+.curso-tarjeta {
+    grid-template-columns: 260px 1fr;
+    min-height: 290px;
+    padding: 15px;
+}
+
+.curso-imagen-contenedor {
+    width: 260px;
+    height: 260px;
+}
+
+.curso-contenido {
+    padding: 20px 28px;
+}
+
+.curso-etiqueta {
+    font-size: 0.67rem;
+}
+
+.curso-tarjeta h3 {
+    font-size: 2.2rem;
+}
+
+.curso-subtitulo {
+    margin: 7px 0 15px;
+    font-size: 1.05rem;
+}
+
+.curso-descripcion {
+    max-width: 440px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.curso-contenido .transformacion-boton {
+    padding: 13px 23px;
+    font-size: 0.68rem;
+}
+
+@media (max-width: 700px) {
+
+    .curso-tarjeta {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .curso-imagen-contenedor {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .curso-contenido {
+        align-items: center;
+        padding: 24px 17px 12px;
+        text-align: center;
+    }
+
+}
+

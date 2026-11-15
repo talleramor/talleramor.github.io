@@ -1,0 +1,284 @@
+/* ========================================
+   UNIVERSO DE POESÍA
+======================================== */
+
+.pagina-poesia {
+    margin: 0;
+    color: #402f38;
+    background:
+        radial-gradient(circle at 18% 22%, rgba(211, 151, 169, 0.18), transparent 32%),
+        radial-gradient(circle at 82% 76%, rgba(126, 74, 105, 0.12), transparent 34%),
+        linear-gradient(145deg, #fffaf7 0%, #f7edef 55%, #efe3e8 100%);
+}
+
+/* Navegación superior */
+
+.poesia-navegacion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 5%;
+    z-index: 10;
+}
+
+.poesia-regreso {
+    color: #6f4359;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.poesia-regreso:hover {
+    color: #b05b7b;
+}
+
+/* Portada */
+
+.poesia-portada {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 24px 70px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.poesia-portada::before,
+.poesia-portada::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0.16;
+}
+
+/* Gaviota dibujada por Madeleine en 1994 */
+.poesia-portada::before {
+    width: clamp(110px, 15vw, 210px);
+    height: clamp(85px, 12vw, 165px);
+    top: 6%;
+    left: 4%;
+    background-image: url("../images/gaviota94.png");
+    transform: rotate(-8deg);
+}
+
+/* Carrucho dibujado por Madeleine */
+.poesia-portada::after {
+    width: clamp(95px, 13vw, 180px);
+    height: clamp(105px, 15vw, 205px);
+    right: 4%;
+    bottom: 5%;
+    background-image: url("../images/carrucho.png");
+    transform: rotate(8deg);
+}
+
+.poesia-portada::after {
+    right: 4%;
+    bottom: 3%;
+    transform: rotate(162deg);
+}
+
+.poesia-portada-contenido {
+    position: relative;
+    width: min(760px, 92%);
+    padding: clamp(45px, 7vw, 80px);
+    border: 1px solid rgba(139, 76, 104, 0.22);
+    border-radius: 48% 52% 45% 55% / 55% 44% 56% 45%;
+    background: rgba(255, 252, 249, 0.62);
+    box-shadow: 0 28px 70px rgba(93, 55, 73, 0.12);
+    backdrop-filter: blur(8px);
+}
+
+.poesia-susurro {
+    margin: 0 0 22px;
+    color: #a45a78;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+
+.poesia-portada h1 {
+    margin: 0;
+    color: #4d3040;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(4rem, 11vw, 8.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+}
+
+.poesia-introduccion {
+    max-width: 590px;
+    margin: 34px auto 0;
+    color: #715864;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    font-style: italic;
+    line-height: 1.9;
+}
+
+.poesia-firma {
+    margin: 35px 0 0;
+    color: #8c526c;
+    font-size: 0.86rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+/* Pantallas pequeñas */
+
+@media (max-width: 700px) {
+    .poesia-navegacion {
+        padding: 22px 20px;
+    }
+
+    .poesia-portada {
+        padding: 100px 18px 55px;
+    }
+
+    .poesia-portada-contenido {
+        padding: 55px 25px;
+        border-radius: 42px;
+    }
+
+    .poesia-susurro {
+        letter-spacing: 0.2em;
+        line-height: 1.6;
+    }
+}
+
+/* ========================================
+   RECORRIDO POR LOS POEMAS
+======================================== */
+
+.poesia-recorrido {
+    padding: 110px 24px 90px;
+    text-align: center;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 252, 247, 0.25),
+            rgba(239, 218, 218, 0.32)
+        );
+}
+
+.poesia-recorrido-encabezado {
+    width: min(760px, 100%);
+    margin: 0 auto;
+}
+
+.poesia-recorrido-etiqueta {
+    margin-bottom: 18px;
+    color: #9a6b72;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.24rem;
+    text-transform: uppercase;
+}
+
+.poesia-recorrido h2 {
+    margin: 0;
+    color: #4b3038;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.1rem, 5vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.poesia-recorrido-introduccion {
+    max-width: 600px;
+    margin: 25px auto 0;
+    color: #765c62;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.08rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+details[open] > summary {
+    display: none !important;
+}
+
+.poesia-texto,
+.poesia-poema-fragmento,
+.poesia-poema h3,
+.poesia-poema-anio,
+.poesia-poema-firma {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.poesia-texto {
+    cursor: default;
+}
+
+/* ========================================
+   GALERÍA DE POEMAS EN TRES COLUMNAS
+======================================== */
+
+.poesia-lista {
+    width: min(1400px, calc(100vw - 80px));
+    margin: 65px 0 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+
+.poesia-poema {
+    padding: 34px 26px;
+}
+
+/* El poema abierto ocupa todo el ancho */
+.poesia-poema.poesia-abierto {
+    grid-column: 1 / -1;
+    width: min(760px, 100%);
+    margin-inline: auto;
+    padding: 48px 55px;
+}
+
+/* Tabletas: dos columnas */
+@media (max-width: 900px) {
+    .poesia-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Teléfonos: una columna */
+@media (max-width: 600px) {
+    .poesia-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.poesia-portada-enlace {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.poesia-portada-enlace:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+
+.poesia-portada-enlace:focus-visible {
+    outline: 2px solid #7c4f59;
+    outline-offset: 6px;
+}
+

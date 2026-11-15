@@ -1,0 +1,411 @@
+/* ==================================================
+   PÁGINA SOBRE MÍ — MADELEINE E. BELLIARD
+   ================================================== */
+
+:root {
+    --sobre-fondo: #f8f4ee;
+    --sobre-fondo-suave: #eee7f2;
+    --sobre-violeta: #6e5878;
+    --sobre-violeta-oscuro: #3f3148;
+    --sobre-rosa: #c79aaa;
+    --sobre-turquesa: #88b7b1;
+    --sobre-texto: #342f35;
+    --sobre-blanco: rgba(255, 255, 255, 0.68);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.sobre-mi-pagina {
+    margin: 0;
+    color: var(--sobre-texto);
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(199, 154, 170, 0.13),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(136, 183, 177, 0.13),
+            transparent 30%
+        ),
+        var(--sobre-fondo);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ==================================================
+   ENLACE DE REGRESO
+   ================================================== */
+
+.sobre-mi-encabezado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding: 28px 5%;
+}
+
+.sobre-mi-regreso {
+    color: var(--sobre-violeta-oscuro);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.sobre-mi-regreso:hover {
+    color: var(--sobre-rosa);
+}
+
+/* ==================================================
+   PORTADA
+   ================================================== */
+
+.sobre-mi-portada {
+    position: relative;
+    min-height: 88vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    padding: 80px 24px 50px;
+    text-align: center;
+}
+
+.sobre-mi-portada::before,
+.sobre-mi-portada::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.sobre-mi-portada::before {
+    width: min(56vw, 720px);
+    height: min(56vw, 720px);
+    top: -34%;
+    right: -12%;
+    background: rgba(136, 183, 177, 0.11);
+}
+
+.sobre-mi-portada::after {
+    width: min(42vw, 520px);
+    height: min(42vw, 520px);
+    bottom: -26%;
+    left: -10%;
+    background: rgba(199, 154, 170, 0.12);
+}
+
+.sobre-mi-portada-contenido {
+    position: relative;
+    z-index: 2;
+    width: min(850px, 92%);
+    padding: clamp(42px, 7vw, 85px);
+    border: 1px solid rgba(110, 88, 120, 0.15);
+    border-radius: 50%;
+    background: var(--sobre-blanco);
+    box-shadow: 0 24px 60px rgba(63, 49, 72, 0.08);
+    backdrop-filter: blur(4px);
+}
+
+.sobre-mi-etiqueta {
+    margin: 0 0 18px;
+    color: var(--sobre-violeta);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.sobre-mi-portada h1 {
+    margin: 0;
+    color: var(--sobre-violeta-oscuro);
+    font-size: clamp(2.7rem, 7vw, 6.6rem);
+    font-weight: 400;
+    line-height: 0.95;
+}
+
+.sobre-mi-frase {
+    margin: 30px auto 18px;
+    color: var(--sobre-violeta);
+    font-size: clamp(1.15rem, 2.3vw, 1.75rem);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.sobre-mi-presentacion {
+    max-width: 630px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.88rem, 1.4vw, 1rem);
+    letter-spacing: 0.07em;
+    line-height: 1.8;
+}
+
+/* ==================================================
+   HISTORIA
+   ================================================== */
+
+.sobre-mi-historia {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 110px 0;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1.15fr);
+    gap: clamp(45px, 8vw, 110px);
+    align-items: center;
+}
+
+.sobre-mi-foto {
+    position: relative;
+    margin: 0;
+}
+
+.sobre-mi-foto::before {
+    content: "";
+    position: absolute;
+    inset: 24px -22px -24px 22px;
+    z-index: -1;
+    border-radius: 48% 48% 45% 52%;
+    background: linear-gradient(
+        145deg,
+        rgba(199, 154, 170, 0.32),
+        rgba(136, 183, 177, 0.25)
+    );
+}
+
+.sobre-mi-foto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 48% 48% 45% 52%;
+    object-fit: contain;
+    object-position: center bottom;
+    box-shadow: 0 25px 55px rgba(63, 49, 72, 0.14);
+}
+
+.sobre-mi-texto h2,
+.sobre-mi-titulo-seccion h2,
+.sobre-mi-reconocimiento h2 {
+    margin: 0 0 28px;
+    color: var(--sobre-violeta-oscuro);
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1.08;
+}
+
+.sobre-mi-texto p:not(.sobre-mi-etiqueta) {
+    margin: 0 0 20px;
+    font-size: clamp(1rem, 1.4vw, 1.13rem);
+    line-height: 1.9;
+}
+
+/* ==================================================
+   FACETAS
+   ================================================== */
+
+.sobre-mi-facetas {
+    padding: 110px 5%;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(238, 231, 242, 0.83),
+            rgba(248, 244, 238, 0.84)
+        );
+}
+
+.sobre-mi-titulo-seccion {
+    max-width: 720px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.sobre-mi-facetas-grid {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+}
+
+.sobre-mi-faceta {
+    grid-column: span 2;
+    min-height: 180px;
+    padding: 36px 30px;
+    border: 1px solid rgba(110, 88, 120, 0.13);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.56);
+    box-shadow: 0 18px 40px rgba(63, 49, 72, 0.06);
+    text-align: center;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sobre-mi-faceta:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.sobre-mi-faceta:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.sobre-mi-faceta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 24px 48px rgba(63, 49, 72, 0.11);
+}
+
+.sobre-mi-faceta span {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--sobre-violeta);
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.sobre-mi-faceta p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/* ==================================================
+   RECONOCIMIENTO
+   ================================================== */
+
+.sobre-mi-reconocimiento {
+    width: min(820px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 130px 0;
+    text-align: center;
+}
+
+.sobre-mi-reconocimiento p:not(.sobre-mi-etiqueta) {
+    margin: 0 auto;
+    font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+    line-height: 1.9;
+}
+
+.sobre-mi-reconocimiento strong {
+    color: var(--sobre-violeta);
+}
+
+/* ==================================================
+   BOTÓN VOLVER ARRIBA
+   ================================================== */
+
+.sobre-mi-arriba {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 30;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background: var(--sobre-violeta);
+    box-shadow: 0 10px 25px rgba(63, 49, 72, 0.22);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.sobre-mi-arriba:hover {
+    transform: translateY(-4px);
+    background: var(--sobre-rosa);
+}
+
+/* ==================================================
+   TABLETAS
+   ================================================== */
+
+@media (max-width: 900px) {
+
+    .sobre-mi-historia {
+        grid-template-columns: 1fr;
+        width: min(680px, calc(100% - 40px));
+    }
+
+    .sobre-mi-foto {
+        width: min(430px, 90%);
+        margin: 0 auto;
+    }
+
+    .sobre-mi-facetas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre-mi-faceta,
+    .sobre-mi-faceta:nth-child(4),
+    .sobre-mi-faceta:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .sobre-mi-faceta:last-child {
+        grid-column: 1 / -1;
+        width: min(460px, 100%);
+        justify-self: center;
+    }
+}
+
+/* ==================================================
+   TELÉFONOS
+   ================================================== */
+
+@media (max-width: 600px) {
+
+    .sobre-mi-encabezado {
+        padding: 22px 20px;
+    }
+
+    .sobre-mi-regreso {
+        font-size: 0.62rem;
+    }
+
+    .sobre-mi-portada {
+        min-height: 92vh;
+        padding-inline: 15px;
+    }
+
+    .sobre-mi-portada-contenido {
+        width: 100%;
+        padding: 58px 22px;
+        border-radius: 46%;
+    }
+
+    .sobre-mi-historia,
+    .sobre-mi-facetas,
+    .sobre-mi-reconocimiento {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .sobre-mi-facetas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-mi-faceta,
+    .sobre-mi-faceta:last-child {
+        grid-column: auto;
+        width: auto;
+    }
+
+    .sobre-mi-arriba {
+        right: 16px;
+        bottom: 16px;
+    }
+}
+
